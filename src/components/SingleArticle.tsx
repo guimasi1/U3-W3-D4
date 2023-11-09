@@ -9,9 +9,12 @@ const SingleArticle = ({ articleData }: { articleData: FetchArticles }) => {
     <Col>
       <Card style={{ height: " 100%" }}>
         <Card.Img
+          onClick={() => {
+            navigate(`/detail/${articleData.id}`);
+          }}
           variant="top"
           src={articleData.image_url}
-          style={{ height: "200px" }}
+          style={{ height: "200px", cursor: "pointer" }}
         />
         <Card.Body className="d-flex justify-content-between flex-column">
           <div>
